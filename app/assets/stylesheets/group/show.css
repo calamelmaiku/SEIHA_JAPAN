@@ -1,25 +1,6 @@
-.wrapper {
-  display: flex;
-}
-
-/* サイドバー親 */
-.chanel {
-  background-color: white;
-  width: 100vw;
-  height: 95vh;
-  padding: 20px;
-}
-
 /* グループ詳細 */
 .group-detail {
   margin: 20px;
-}
-
-.group-name {
-  color: darkslategray;
-  font-size: 30px;
-  font-weight: bold;
-  padding: 10px;
 }
 
 .group-creator {
@@ -32,9 +13,31 @@
   padding: 10px;
 }
 
+/* スポットリストのスタイル */
+.group-spots {
+  margin-top: 20px;
+}
+/* スポット一覧を横並びにする */
+.spot-list {
+  display: flex;
+  flex-wrap: wrap; /* 必要に応じて次の行に折り返す */
+  gap: 10px; /* 要素間のスペースを指定 */
+}
+
+.group-spot-name {
+  font-size: 25px;
+  color: darkslategray;
+  text-decoration: underline;
+  cursor: pointer;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
 #map {
   width: 100%;
   height: 400px;
   margin-top: 20px;
   border: 1px solid darkgray;
+  border-radius: 8px;
 }
+

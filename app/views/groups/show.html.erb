@@ -19,9 +19,22 @@
       <div class="group-text">
         <%= @group.text %>
       </div>
+      <!-- スポット名をリストで表示 -->
+      <div class="group-spots">
+        <h3>スポット一覧</h3>
+        <div class="spot-list">
+          <% @spots.each do |spot| %>
+            <div class="group-spot-name">
+              ・<%= link_to spot.name, group_spot_path(@group, spot), class: "group-spot-name" %>
+            </div>
+          <% end %>
+        </div>
+      </div>
       <!-- Googleマップを表示するためのプレースホルダー -->
       <div id="map"></div>
     </div>
   </div>
 </div>
+
+
 
