@@ -21,8 +21,14 @@
 }
 
 .group-name {
-  font-size: 25px;
+  color: darkslategray;
+  font-size: 30px;
   text-decoration: none;
   font-weight: bold;
+  padding: 5px;
+}
+
+.group-text {
+  font-size: 20px;
   padding: 5px;
 }

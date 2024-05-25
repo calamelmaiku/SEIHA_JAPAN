@@ -1,13 +1,20 @@
 <%# CSS・・・assets/stylesheets/group/index.css %>
 <!-- 共通ヘッダーを読み込む -->
 <%= render 'shared/header' %>
+
 <div class="wrapper">
-  <%# サイドバー %>
   <div class="chanel">
     <div class="groups">
       <%# @groups.each do |group| %>
         <div class="group">
-          <%= link_to 'group.name', 'group_path(group)', class:"group-name" %>
+          <div class="group-name">
+            ○<%= link_to '#', class: "group-name" do %>
+              グループ名 <!-- ここに本来は group.name が入ります -->
+            <% end %>
+          </div>
+          <div class="group-text">
+            グループの説明 <!-- ここに本来は group.text が入ります -->
+          </div>
         </div>
       <%# end %>
     </div>
