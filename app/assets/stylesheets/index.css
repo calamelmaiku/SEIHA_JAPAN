@@ -1,28 +1,28 @@
-.wrapper{
+.wrapper {
   display: flex;
 }
 
-/*サイドバー親 */
-.chanel{
-  background-color:white;
+/* サイドバー親 */
+.chanel {
+  background-color: white;
   width: 100vw;
   height: 95vh;
   padding: 20px;
 }
 
 /* サイドバー */
-.groups{ 
+.groups {
   margin: 5px;
 }
 
-.group{
+.group {
   padding: 5px;
   margin-bottom: 10px;
 }
 
-.group-name{
-font-size: 25px;
-text-decoration: none;
-font-weight: bold;
-padding: 5px;
+.group-name {
+  font-size: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px;
 }

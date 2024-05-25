@@ -1,7 +1,8 @@
+/* ヘッダーのスタイル */
 .top-page-header {
   width: 100vw;
   height: 5vh;
-  background-color:darkslategray;
+  background-color: darkslategray;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -15,7 +16,7 @@
 .app-name {
   display: inline-block;
   color: white;
-  font-size:3.5dvh;
+  font-size: 3.5dvh;
   font-weight: 1000;
   text-decoration: none;
   margin-left: 2vw;
@@ -32,38 +33,11 @@
   padding: 4px;
 }
 
-.user-name {
+.user-name, .logout, .login, .sign-up {
   text-decoration: none;
   color: white;
   font-weight: bold;
-  background-color:orangered;
-  padding: 4px;
-  border-radius: 10px;
-}
-
-.logout {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  background-color:orangered;
-  padding: 4px;
-  border-radius: 10px;
-}
-
-.login {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  background-color:orangered;
-  padding: 4px;
-  border-radius: 10px;
-}
-
-.sign-up {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  background-color:orangered;
+  background-color: orangered;
   padding: 4px;
   border-radius: 10px;
 }
