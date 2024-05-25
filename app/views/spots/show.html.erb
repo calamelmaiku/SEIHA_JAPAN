@@ -1,0 +1,27 @@
+<%# CSS・・・assets/stylesheets/spot/show.css %>
+<!-- 共通ヘッダーを読み込む -->
+<%= render 'shared/header' %>
+
+<div class="wrapper">
+  <div class="chanel">
+    <div class="spot-detail">
+      <!-- グループ名とスポット説明文を横並びにする -->
+      <div class="group-spot-title">
+        <div class="spot-name">
+          ・<%= @spot.name %>
+        </div>
+        <div class="group-spot-name">
+          （<%= link_to @group.name, group_path(@group), class: "group-spot-name" %>）
+        </div>
+      </div>
+      <div class="spot-text">
+        <%= @spot.text %>
+      </div>
+      <div class="spot-address">
+        <%= @spot.address %>
+      </div>
+      <div id="map"></div>
+    </div>
+  </div>
+</div>
+

@@ -10,11 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_05_25_150053) do
+ActiveRecord::Schema[7.0].define(version: 2024_05_25_160912) do
   create_table "groups", charset: "utf8", force: :cascade do |t|
     t.string "name", null: false
     t.string "creator"
     t.text "text"
+  end
+
+  create_table "spots", charset: "utf8", force: :cascade do |t|
+    t.string "name", null: false
+    t.text "text"
+    t.string "address"
+    t.float "latitude"
+    t.float "longitude"
+    t.bigint "group_id", null: false
+    t.index ["group_id"], name: "index_spots_on_group_id"
   end
 
 end
