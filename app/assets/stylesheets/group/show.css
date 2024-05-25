@@ -26,6 +26,7 @@
 
 .group-spot-names {
   font-size: 25px;
+  font-weight: bold;
   color: darkslategray;
   text-decoration: underline;
   cursor: pointer;
