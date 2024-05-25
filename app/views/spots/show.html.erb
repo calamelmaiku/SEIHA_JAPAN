@@ -1,2 +1,21 @@
-<h1>Spots#show</h1>
-<p>Find me in app/views/spots/show.html.erb</p>
+<%# CSS・・・assets/stylesheets/spot/show.css %>
+<!-- 共通ヘッダーを読み込む -->
+<%= render 'shared/header' %>
+
+<div class="wrapper">
+  <div class="chanel">
+    <div class="spot-detail">
+      <div class="spot-name">
+        <%= @spot.name %>
+      </div>
+      <div class="spot-text">
+        <%= @spot.text %>
+      </div>
+      <div class="spot-address">
+        <%= @spot.address %>
+      </div>
+      <div id="map"></div>
+    </div>
+  </div>
+</div>
+
