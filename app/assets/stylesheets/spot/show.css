@@ -2,11 +2,24 @@
   margin: 5px;
 }
 
+.group-spot-title {
+  display: flex;
+  align-items: center; /* 垂直方向のセンタリング */
+  gap: 10px; /* 要素間のスペース */
+}
+
 .spot-name {
   color: darkslategray;
   font-size: 25px;
   text-decoration: none;
   font-weight: bold;
+  padding: 5px;
+}
+
+.group-spot-name {
+  color: black;
+  font-size: 25px;
+  text-decoration: none;
   padding: 5px;
 }
 

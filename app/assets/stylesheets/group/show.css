@@ -24,7 +24,7 @@
   gap: 10px; /* 要素間のスペースを指定 */
 }
 
-.group-spot-name {
+.group-spot-names {
   font-size: 25px;
   color: darkslategray;
   text-decoration: underline;
