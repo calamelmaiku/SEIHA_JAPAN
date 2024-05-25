@@ -1,2 +1,15 @@
-<h1>Groups#index</h1>
-<p>Find me in app/views/groups/index.html.erb</p>
+<%# CSS・・・assets/stylesheets/group/index.css %>
+<%# サイドバー %>
+<%= render "shared/header" %>
+<div class="wrapper">
+  <%# サイドバー %>
+  <div class="chanel">
+    <div class="groups">
+      <%# @groups.each do |group| %>
+        <div class="group">
+          <%= link_to 'group.name', 'group_path(group)', class:"group-name" %>
+        </div>
+      <%# end %>
+    </div>
+  </div>
+</div>
