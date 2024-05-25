@@ -1,0 +1,27 @@
+<%# CSS・・・assets/stylesheets/group/show.css %>
+<!-- 共通ヘッダーを読み込む -->
+<%= render 'shared/header' %>
+
+<div class="wrapper">
+  <!-- サイドバーやその他の要素を囲む -->
+  <div class="chanel">
+    <!-- グループ詳細情報を表示する領域 -->
+    <div class="group-detail">
+      <!-- グループ名を表示 -->
+      <div class="group-name">
+        ○<%= @group.name %>
+      </div>
+      <!-- グループの作成者を表示 -->
+      <div class="group-creator">
+        作成者: <%= @group.creator %>
+      </div>
+      <!-- グループの説明文を表示 -->
+      <div class="group-text">
+        <%= @group.text %>
+      </div>
+      <!-- Googleマップを表示するためのプレースホルダー -->
+      <div id="map"></div>
+    </div>
+  </div>
+</div>
+

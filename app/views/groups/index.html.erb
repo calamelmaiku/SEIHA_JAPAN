@@ -5,16 +5,18 @@
 <div class="wrapper">
   <div class="chanel">
     <div class="groups">
-      <% @groups.each do |group| %>
+      <%# @groups.each do |group| %>
         <div class="group">
           <div class="group-name">
-            ○<%= link_to group.name, group_path(group), class: "group-name" %>
+            ○<%= link_to '#', class: "group-name" do %>
+              グループ名 <!-- ここに本来は group.name が入ります -->
+            <% end %>
           </div>
           <div class="group-text">
-            <%= group.text %>
+            グループの説明 <!-- ここに本来は group.text が入ります -->
           </div>
         </div>
-      <% end %>
+      <%# end %>
     </div>
   </div>
 </div>
