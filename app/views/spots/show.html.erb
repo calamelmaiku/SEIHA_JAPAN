@@ -21,6 +21,10 @@
         <%= @spot.address %>
       </div>
       <div id="map"></div>
+      <!-- イッタ登録/コレカラ登録ボタンを表示 -->
+      <div class="spot-buttons">
+        <%= button_to @visited.visited ? 'コレカラにする' : 'イッタにする', toggle_visited_group_spot_path(@group, @spot), method: :patch, class: 'btn btn-primary', id: 'toggle-visited-button' %>
+      </div>
     </div>
   </div>
 </div>
