@@ -1,5 +1,6 @@
 class SpotsController < ApplicationController
-  before_action :set_group
+  before_action :authenticate_user!, only: [:show]
+  before_action :set_group, only: [:show]
   before_action :set_spot, only: [:show]
 
   def show
