@@ -1,24 +1,44 @@
-# README
+# アプリケーション名
+セイハ！
+# アプリケーション概要
+訪れた場所記録し、それがステータスとなり知識と達成感が得られるWEBアプリ
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# URL
 
-Things you may want to cover:
+# テスト用アカウント
+* Basic認証パスワード：1818
+* Basic認証ID：seiha
+* メールアドレス：seiha@seiha.com
+* パスワード：seiha1818
 
-* Ruby version
+# 利用方法
+1.トップページ(一覧ページ)ヘッダーから新規登録を行う  
+2.任意のグループ名からグループ詳細ページに遷移し、さらに任意のスポット名からのスポット詳細ページに遷移する  
+3.スポット詳細ページからイッタボタンを押し、イッタ登録をする  
+4.トップページでイッタ登録の数がグループごとに表示されセイハ率がわかる  
 
-* System dependencies
+# アプリケーションを作成した背景
+旅行をする中で、行った場所をグループ別で管理するものがないと感じていた。また、どのようなグループがあるのか知らないで行くことが大半で、調べてみても簡潔に載っておらず、説明や見どころが冗長的な記事が多い。これらが綺麗にまとまっていて、イッタかどうか記録し、達成率がわかるサービスを作成することにした。
 
-* Configuration
+# 実装した機能についての画像やGIFおよびその説明※
 
-* Database creation
+# 実装予定の機能
 
-* Database initialization
+# データベース設計
+[![Image from Gyazo](https://i.gyazo.com/9e69aaa9fdb4f9cd28e8bac73636bdde.png)](https://gyazo.com/9e69aaa9fdb4f9cd28e8bac73636bdde)
 
-* How to run the test suite
+# 画面遷移図
+[![Image from Gyazo](https://i.gyazo.com/3937f7a8c24ffec04b5fd192329f5bc0.png)](https://gyazo.com/3937f7a8c24ffec04b5fd192329f5bc0)
 
-* Services (job queues, cache servers, search engines, etc.)
+# 開発環境
+* フロントエンド
+* バックエンド
+* テスト
 
-* Deployment instructions
+# ローカルでの動作方法
 
-* ...
+# 工夫したポイント
+ 
+# 改善点
+
+# 制作時間
