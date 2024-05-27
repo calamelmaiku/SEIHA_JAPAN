@@ -12,3 +12,16 @@
   font-size: 20px;
   padding: 5px;
 }
+
+/* 名前フォント */
+.group-name {
+  color: darkslategray;
+  font-size: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.group-name:hover {
+  color: orangered;
+}

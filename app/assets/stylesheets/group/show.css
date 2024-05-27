@@ -3,6 +3,14 @@
   margin: 20px;
 }
 
+.group-group-name{
+  color: darkslategray;
+  font-size: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px;
+}
+
 .group-creator {
   font-size: 18px;
   padding: 5px;
@@ -21,10 +29,17 @@
 .spot-list {
   display: flex;
   flex-wrap: wrap; /* 必要に応じて次の行に折り返す */
-  gap: 10px; /* 要素間のスペースを指定 */
+  gap: 30px; /* 要素間のスペースを指定 */
 }
 
 .group-spot-names {
+  font-size: 25px;
+  font-weight: bold;
+  color: darkslategray;
+  margin-bottom: 10px;
+}
+
+group-spot-name{
   font-size: 25px;
   font-weight: bold;
   color: darkslategray;
@@ -32,6 +47,10 @@
   cursor: pointer;
   text-decoration: none;
   margin-bottom: 10px;
+}
+
+.group-spot-name:hover {
+  color: orangered;
 }
 
 #map {

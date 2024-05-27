@@ -38,11 +38,9 @@
   box-sizing: border-box;
 }
 
-/* 名前フォント */
-.group-name {
+/* 達成率 */
+.completion-rate {
+  font-size: 16px;
   color: darkslategray;
-  font-size: 30px;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 5px;
+  margin-left: 10px;
 }

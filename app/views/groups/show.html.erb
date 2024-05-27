@@ -8,8 +8,8 @@
     <!-- グループ詳細情報を表示する領域 -->
     <div class="group-detail">
       <!-- グループ名を表示 -->
-      <div class="group-name">
-        ○<%= @group.name %>
+      <div class="group-group-name">
+         <%= @completion_rate == 100 ? '◎' : '○' %><%= @group.name %> <span class="completion-rate">(<%= @completion_rate %>%)</span>
       </div>
       <!-- グループの作成者を表示 -->
       <div class="group-creator">
@@ -25,7 +25,8 @@
         <div class="spot-list">
           <% @spots.each do |spot| %>
             <div class="group-spot-names">
-              ・<%= link_to spot.name, group_spot_path(@group, spot), class: "group-spot-names" %>
+              <%= spot.visiteds.find_by(user_id: current_user.id)&.visited ? '✔' : '・' %>
+              <%= link_to spot.name, group_spot_path(@group, spot), class: "group-spot-name" %>
             </div>
           <% end %>
         </div>

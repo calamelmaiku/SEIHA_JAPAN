@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_05_26_022154) do
+ActiveRecord::Schema[7.0].define(version: 2024_05_26_112844) do
   create_table "groups", charset: "utf8", force: :cascade do |t|
     t.string "name", null: false
     t.string "creator"
@@ -40,4 +40,16 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_26_022154) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "visiteds", charset: "utf8", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "spot_id", null: false
+    t.boolean "visited"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["spot_id"], name: "index_visiteds_on_spot_id"
+    t.index ["user_id"], name: "index_visiteds_on_user_id"
+  end
+
+  add_foreign_key "visiteds", "spots"
+  add_foreign_key "visiteds", "users"
 end
