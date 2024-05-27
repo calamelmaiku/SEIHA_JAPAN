@@ -11,7 +11,7 @@
           <%= @visited.visited ? '✔' : '・' %><%= @spot.name %>
         </div>
         <div class="group-spot-name">
-          （<%= link_to @group.name, group_path(@group), class: "group-spot-name" %>）
+          <%= link_to "（" + @group.name + "）", group_path(@group), class: "group-spot-name" %>
         </div>
       </div>
       <div class="spot-text">
