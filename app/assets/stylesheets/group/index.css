@@ -12,3 +12,10 @@
   font-size: 20px;
   padding: 5px;
 }
+
+/* 達成率 */
+.completion-rate {
+  font-size: 18px;
+  color: green;
+  margin-left: 10px;
+}

@@ -1,5 +1,4 @@
 <%# CSS・・・assets/stylesheets/group/index.css %>
-<!-- 共通ヘッダーを読み込む -->
 <%= render 'shared/header' %>
 
 <div class="wrapper">
@@ -9,6 +8,10 @@
         <div class="group">
           <div class="group-name">
             ○<%= link_to group.name, group_path(group), class: "group-name" %>
+              <% if user_signed_in? %>
+              <% completion_rate = @group_completion_rates[group.id] %>
+              <span class="completion-rate">(達成率: <%= completion_rate %>%)</span>
+            <% end %>
           </div>
           <div class="group-text">
             <%= group.text %>
