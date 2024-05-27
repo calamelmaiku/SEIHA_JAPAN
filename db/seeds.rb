@@ -1,13 +1,13 @@
 # グループデータ
 groups = [
-  { name: "茨城観光", creator: "まこと", text: "茨城の観光スポットを巡るグループです" },
+  { name: "三名園", creator: "まこと", text: "茨城の観光スポットを巡るグループです" },
   { name: "東京観光", creator: "たろう", text: "東京の観光スポットを巡るグループです" },
   { name: "京都観光", creator: "じろう", text: "京都の観光スポットを巡るグループです" }
 ]
 
 # スポットデータ
 spots = [
-  { name: "偕楽園", text: "茨城にある庭園", latitude: 36.3756, longitude: 140.454, group_name: "茨城観光" },
+  { name: "偕楽園", text: "茨城にある庭園", address: "茨城県水戸市", latitude: 36.3756, longitude: 140.454, group_name: "茨城観光" },
   { name: "筑波山", text: "茨城にある山", latitude: 36.2251, longitude: 140.1033, group_name: "茨城観光" },
   { name: "大洗水族館", text: "茨城にある水族館", latitude: 36.3131, longitude: 140.5707, group_name: "茨城観光" },
   { name: "東京タワー", text: "東京にある塔", latitude: 35.6586, longitude: 139.7454, group_name: "東京観光" },
@@ -32,6 +32,7 @@ spots.each do |spot_data|
   if group
     Spot.find_or_create_by(name: spot_data[:name], group: group) do |spot|
       spot.text = spot_data[:text]
+      spot.address = spot_data[:address]
       spot.latitude = spot_data[:latitude]
       spot.longitude = spot_data[:longitude]
     end

@@ -6,6 +6,7 @@
   display: flex;
   align-items: center; /* 垂直方向のセンタリング */
   gap: 10px; /* 要素間のスペース */
+  margin-bottom: 15px;
 }
 
 .spot-name {

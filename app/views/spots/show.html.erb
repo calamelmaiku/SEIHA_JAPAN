@@ -13,12 +13,12 @@
         <div class="group-spot-name">
           <%= link_to "（" + @group.name + "）", group_path(@group), class: "group-spot-name" %>
         </div>
+        <div class="spot-address">
+        <%= @spot.address %>
+        </div>
       </div>
       <div class="spot-text">
         <%= @spot.text %>
-      </div>
-      <div class="spot-address">
-        <%= @spot.address %>
       </div>
       <div id="map"></div>
       <!-- イッタ登録/コレカラ登録ボタンを表示 -->
