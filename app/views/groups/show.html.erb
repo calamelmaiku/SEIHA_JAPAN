@@ -9,7 +9,7 @@
     <div class="group-detail">
       <!-- グループ名を表示 -->
       <div class="group-name">
-        ○<%= @group.name %>
+         <%= @completion_rate == 100 ? '◎' : '○' %><%= @group.name %> <span class="completion-rate">(<%= @completion_rate %>%)</span>
       </div>
       <!-- グループの作成者を表示 -->
       <div class="group-creator">
@@ -18,10 +18,6 @@
       <!-- グループの説明文を表示 -->
       <div class="group-text">
         <%= @group.text %>
-      </div>
-      <!-- 達成率を表示 -->
-      <div class="group-completion-rate">
-        達成率: <%= @completion_rate %>%
       </div>
       <!-- スポット名をリストで表示 -->
       <div class="group-spots">

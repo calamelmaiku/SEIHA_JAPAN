@@ -13,14 +13,6 @@
   padding: 10px;
 }
 
-/* 達成率 */
-.group-completion-rate {
-  font-size: 20px;
-  color: green;
-  font-weight: bold;
-  margin-top: 10px;
-}
-
 /* スポットリストのスタイル */
 .group-spots {
   margin-top: 20px;

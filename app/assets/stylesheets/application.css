@@ -46,3 +46,10 @@
   font-weight: bold;
   padding: 5px;
 }
+
+/* 達成率 */
+.completion-rate {
+  font-size: 16px;
+  color: darkslategray;
+  margin-left: 10px;
+}
