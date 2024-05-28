@@ -4,9 +4,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // Google Mapsを初期化する関数
   function initMap() {
-    // ジオコーダーの初期化
-    const geocoder = new google.maps.Geocoder();
-
     // Google Mapオブジェクトの作成
     map = new google.maps.Map(document.getElementById('map'), {
       // 地図の中心を設定（緯度と経度）
@@ -15,12 +12,14 @@ document.addEventListener("DOMContentLoaded", function() {
       zoom: 5,
     });
 
-    // マーカーの作成
-    const marker = new google.maps.Marker({
-      // マーカーを配置する位置を設定（緯度と経度）
-      position: { lat: 35.682839, lng: 139.759455 },
-      // マーカーを表示する地図を設定
-      map: map
+    // スポットデータを取得してマーカーを追加
+    const spots = window.spotsData;
+    spots.forEach(spot => {
+      new google.maps.Marker({
+        position: { lat: spot.latitude, lng: spot.longitude },
+        map: map,
+        title: spot.name
+      });
     });
   }
 
