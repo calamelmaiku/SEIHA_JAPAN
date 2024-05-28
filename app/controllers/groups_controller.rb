@@ -10,6 +10,7 @@ class GroupsController < ApplicationController
     @group = Group.find(params[:id])
     @spots = @group.spots
     @completion_rate = calculate_completion_rate(@spots)
+    @use_google_maps = true
   end
 
   private

@@ -5,6 +5,7 @@ class SpotsController < ApplicationController
   def show
     # 現在のユーザーがこのスポットを訪問したかどうかを確認
     @visited = @spot.visiteds.find_or_initialize_by(user: current_user)
+    @use_google_maps = true
   end
 
   # スポットの訪問状態をトグルするアクション

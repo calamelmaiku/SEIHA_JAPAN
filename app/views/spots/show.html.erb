@@ -29,3 +29,10 @@
   </div>
 </div>
 
+<%# 変数をJavaScriptに渡すための設定 %>
+<% if @spot.present? %>
+  <script>
+    window.spotData = <%= raw(@spot.to_json(only: [:name, :latitude, :longitude])) %>;
+  </script>
+<% end %>
+
