@@ -37,5 +37,11 @@
   </div>
 </div>
 
+<%# 変数をJavaScriptに渡すための設定 %>
+<% if @spots.present? %>
+  <script>
+    window.spotsData = <%= raw(@spots.to_json(only: [:name, :latitude, :longitude])) %>;
+  </script>
+<% end %>
 
 
