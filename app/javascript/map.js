@@ -10,15 +10,15 @@ document.addEventListener("DOMContentLoaded", function() {
     // Google Mapオブジェクトの作成
     map = new google.maps.Map(document.getElementById('map'), {
       // 地図の中心を設定（緯度と経度）
-      center: { lat: 40.7828, lng: -73.9653 },
-      // ズームレベルを設定
-      zoom: 12,
+      center: { lat: 38.0189, lng: 138.3664 },
+      // 日本全体が表示されるズームレベルを設定
+      zoom: 5,
     });
 
     // マーカーの作成
     const marker = new google.maps.Marker({
       // マーカーを配置する位置を設定（緯度と経度）
-      position: { lat: 40.7828, lng: -73.9653 },
+      position: { lat: 35.682839, lng: 139.759455 },
       // マーカーを表示する地図を設定
       map: map
     });
