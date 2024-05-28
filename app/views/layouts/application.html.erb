@@ -14,7 +14,27 @@
     <%= yield %>
 
     <% if @use_google_maps %>
-      <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAPS_API_KEY'] %>&callback=initMap" async defer></script>
+    <script>
+      // ページが完全に読み込まれた後に実行
+      document.addEventListener("turbo:load", function() {
+        // window.google または window.google.maps が未定義の場合
+        if (!window.google || !window.google.maps) {
+          // 新しい script 要素を作成
+          var script = document.createElement('script');
+          // Google Maps API のスクリプトのソースを設定
+          script.src = `https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAPS_API_KEY'] %>&callback=initMap`;
+          // スクリプトを非同期で読み込むように設定
+          script.async = true;
+          // スクリプトの読み込みを遅延させるように設定
+          script.defer = true;
+          // スクリプトをドキュメントの head に追加して読み込みを開始
+          document.head.appendChild(script);
+        } else {
+          // すでに Google Maps API が読み込まれている場合は、initMap 関数を直接呼び出す
+          initMap();
+        }
+      });
+    </script>
     <% end %>
   </body>
 </html>
