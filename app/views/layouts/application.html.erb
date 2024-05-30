@@ -35,6 +35,25 @@
         }
       });
     </script>
+    <script src="https://cdn.rawgit.com/googlemaps/v3-utility-library/master/infobox/src/infobox.js"></script>
+    <style>
+      .gm-style-iw {
+        max-width: auto !important; /* 吹き出しの最大幅を設定 */
+        font-size: 10px !important; /* 吹き出し内のフォントサイズを設定 */
+        background-color: #fff; /* 背景色を白に設定 */
+        border: 1px solid #ccc; /* 境界線を薄い灰色に設定 */
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); /* 影を追加 */
+        border-radius: 8px; /* 角を丸くする */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 4px !important; /* 吹き出し内のパディングを設定 */
+        height: auto !important; /* 吹き出しの高さを自動調整 */
+      }
+      .gm-ui-hover-effect {
+        display: none !important; /* 閉じるボタンを非表示に */
+      }
+    </style>
     <% end %>
   </body>
 </html>

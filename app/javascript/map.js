@@ -17,17 +17,17 @@ document.addEventListener("DOMContentLoaded", function() {
     updateMap(); // 初期表示時に地図を更新
   }
 
-// 地図を更新する関数
-function updateMap() {
-  if (!map) return;
+  // 地図を更新する関数
+  function updateMap() {
+    if (!map) return;
 
-  // 既存のマーカーをクリアする
-  markers.forEach(marker => marker.setMap(null));
-  markers = [];
+    // 既存のマーカーをクリアする
+    markers.forEach(marker => marker.setMap(null));
+    markers = [];
 
-  console.log("Map updated");
+    console.log("Map updated");
 
-  const currentUrl = window.location.pathname;
+    const currentUrl = window.location.pathname;
 
     // スポット詳細ページの場合
     if (currentUrl.match(/\/groups\/\d+\/spots\/\d+/)) {
@@ -40,6 +40,14 @@ function updateMap() {
           title: spot.name
         });
         markers.push(marker);
+
+        // 吹き出しの作成
+        const infoWindow = new google.maps.InfoWindow({
+          content: `<div style="font-size: 12px;">${spot.name}</div>`,
+        });
+
+        // 吹き出しを常に表示
+        infoWindow.open(map, marker);
 
         // スポットの位置に地図をズーム
         map.setCenter({ lat: spot.latitude, lng: spot.longitude });
@@ -57,6 +65,14 @@ function updateMap() {
             title: spot.name
           });
           markers.push(marker);
+
+          // 吹き出しの作成
+          const infoWindow = new google.maps.InfoWindow({
+            content: `<div>${spot.name}</div>`,
+          });
+
+          // 吹き出しを常に表示
+          infoWindow.open(map, marker);
         });
       }
     }
