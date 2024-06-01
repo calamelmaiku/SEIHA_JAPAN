@@ -3,7 +3,9 @@
   margin: 20px;
 }
 
-.group-group-name{
+.group-group-name {
+  display: flex;
+  align-items: center;
   color: darkslategray;
   font-size: 30px;
   text-decoration: none;
@@ -25,6 +27,7 @@
 .group-spots {
   margin-top: 20px;
 }
+
 /* スポット一覧を横並びにする */
 .spot-list {
   display: flex;
@@ -39,7 +42,7 @@
   margin-bottom: 10px;
 }
 
-group-spot-name{
+.group-spot-name {
   font-size: 25px;
   font-weight: bold;
   color: darkslategray;
@@ -52,4 +55,3 @@ group-spot-name{
 .group-spot-name:hover {
   color: orangered;
 }
-

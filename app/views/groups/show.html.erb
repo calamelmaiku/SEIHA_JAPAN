@@ -9,7 +9,14 @@
     <div class="group-detail">
       <!-- グループ名を表示 -->
       <div class="group-group-name">
-         <%= @completion_rate == 100 ? '◎' : '○' %><%= @group.name %> <span class="completion-rate">(<%= @completion_rate %>%)</span>
+        <%= @completion_rate == 100 ? '◎' : '○' %>
+        <span class="group-name"><%= @group.name %></span>
+        <span class="completion-rate">(<%= @completion_rate %>%)</span>
+        <% if @completion_rate == 100 %>
+          <span class="medal">
+            <img src="<%= asset_path('medals/gold.png') %>" width="30" alt="Gold medal" >
+          </span>
+        <% end %>
       </div>
       <!-- グループの作成者を表示 -->
       <div class="group-creator">
@@ -43,5 +50,3 @@
     window.spotsData = <%= raw(@spots.to_json(only: [:name, :latitude, :longitude])) %>;
   </script>
 <% end %>
-
-

@@ -12,6 +12,11 @@
             <% if completion_rate %>
               <span class="completion-rate">(<%= completion_rate %>%)</span>
             <% end %>
+            <% if completion_rate == 100 %>
+              <span class="medal">
+                <img src="<%= asset_path('medals/gold.png') %>" width="30" alt="Gold medal" >
+              </span>
+            <% end %>
           </div>
           <div class="group-text">
             <%= group.text %>
