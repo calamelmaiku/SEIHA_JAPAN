@@ -17,7 +17,7 @@ class Admin::GroupsController < ApplicationController
   def create
     @group = Group.new(group_params)
     if @group.save
-      redirect_to admin_group_path(@group), notice: 'Group was successfully created.'
+      redirect_to admin_groups_path(@group), notice: 'Group was successfully created.'
     else
       render :new
     end
@@ -49,6 +49,6 @@ class Admin::GroupsController < ApplicationController
   end
 
   def group_params
-    params.require(:group).permit(:name, :description)
+    params.require(:group).permit(:name, :creator, :text)
   end
 end
