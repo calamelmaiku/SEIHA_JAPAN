@@ -6,4 +6,7 @@ class User < ApplicationRecord
   validates :name, presence: true
   has_many :visiteds
   has_many :spots, through: :visiteds
+  def admin?
+    admin
+  end
 end
