@@ -37,7 +37,7 @@
 /* ユーザー関連ボタン */
 .user-name, .logout, .login, .sign-up {
   text-decoration: none;
-  color:orange;
+  color:white;
   font-weight: bold;
   background-color: #2F4F4F;
   padding: 8px 12px;
