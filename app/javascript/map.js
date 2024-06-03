@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", function() {
       zoom: 5,
     });
 
-    console.log("Map initialized");
     updateMap(); // 初期表示時に地図を更新
   }
 
@@ -25,7 +24,6 @@ document.addEventListener("DOMContentLoaded", function() {
     markers.forEach(marker => marker.setMap(null));
     markers = [];
 
-    console.log("Map updated");
 
     const currentUrl = window.location.pathname;
 
@@ -56,7 +54,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     // グループ詳細ページの場合
     else if (currentUrl.match(/\/groups\/\d+/)) {
-      console.log("Updating map with group spots");
       if (window.spotsData) {
         window.spotsData.forEach(spot => {
           const marker = new google.maps.Marker({
@@ -84,7 +81,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // turbo:loadイベントに地図の更新を設定
   document.addEventListener("turbo:load", function() {
-    console.log("Turbo:load event detected");
     updateMap(); // ページ遷移時に地図を更新
   });
 });

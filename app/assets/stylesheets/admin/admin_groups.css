@@ -1,77 +1,106 @@
 /* app/assets/stylesheets/admin_groups.css */
 
-/* グループ一覧のスタイル */
-.admin-groups {
-  width: 100%;
+/* 全体のコンテナスタイル */
+.admin-groups-container {
+  width: 80%;
   margin: 0 auto;
   padding: 20px;
   background-color: #f9f9f9;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.admin-groups h1 {
+.admin-groups-container h1 {
   font-size: 24px;
   margin-bottom: 20px;
   color: #333;
+  text-align: center;
 }
 
-.admin-groups a.new-group {
+.admin-groups-container .btn-primary,
+.admin-groups-container .btn-show,
+.admin-groups-container .btn-edit,
+.admin-groups-container .btn-delete {
   display: inline-block;
-  margin-bottom: 20px;
+  margin: 5px;
   padding: 10px 20px;
-  background-color: #4CAF50;
-  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
   text-decoration: none;
+  color: #fff;
   border-radius: 5px;
-  transition: background-color 0.3s;
+  transition: background-color 1.0s;
+  cursor: pointer;
 }
 
-.admin-groups a.new-group:hover {
+.admin-groups-container .btn-primary {
+  background-color: #4CAF50;
+}
+
+.admin-groups-container .btn-primary:hover {
   background-color: #45a049;
 }
 
-.admin-groups table {
+.admin-groups-container .btn-show {
+  background-color: #17a2b8;
+}
+
+.admin-groups-container .btn-show:hover {
+  background-color: #138496;
+}
+
+.admin-groups-container .btn-edit {
+  background-color: #ffc107;
+  color: #333;
+}
+
+.admin-groups-container .btn-edit:hover {
+  background-color: #e0a800;
+}
+
+.admin-groups-container .btn-delete {
+  background-color: #dc3545;
+}
+
+.admin-groups-container .btn-delete:hover {
+  background-color: #c82333;
+}
+
+/* テーブルのスタイル */
+.admin-groups-table {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 20px;
 }
 
-.admin-groups th, .admin-groups td {
+.admin-groups-table th,
+.admin-groups-table td {
   padding: 12px 15px;
   text-align: left;
   border-bottom: 1px solid #ddd;
 }
 
-.admin-groups th {
+.admin-groups-table th {
   background-color: #f2f2f2;
   color: #333;
 }
 
-.admin-groups tr:hover {
+.admin-groups-table tr:hover {
   background-color: #f5f5f5;
 }
 
-.admin-groups a {
-  color: #2196F3;
-  text-decoration: none;
-  margin-right: 30px;
-  transition: color 0.3s;
-}
-
-.admin-groups a:hover {
-  color: #0b7dda;
-}
-
-/* 外部コンテナのスタイル */
+/* フォームのスタイル */
 .form-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 80vh; /* コンテナが画面の中央に来るように高さを設定 */
+  min-height: 80vh;
 }
 
-/* フォームのスタイル */
 .admin-groups-form {
   width: 50%;
   margin: 0 auto;
@@ -85,6 +114,7 @@
   font-size: 24px;
   margin-bottom: 20px;
   color: #333;
+  text-align: center;
 }
 
 .admin-groups-form .form-group {
@@ -102,24 +132,5 @@
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-}
-
-.admin-groups-form .btn-primary {
-    display: inline-block;
-    margin-bottom: 20px;
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-  }
-
-.admin-groups-form .btn-primary:hover {
-  background-color: #45a049;
-}
-
-/* テキストエリアのリサイズを無効にする */
-.admin-groups-form .form-control {
   resize: none;
 }

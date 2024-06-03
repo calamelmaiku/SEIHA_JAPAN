@@ -1,30 +1,27 @@
-<%# app/assets/stylesheets/admin/admin_groups.css %>
-
+<!-- app/views/admin/groups/index.html.erb -->
 <%= render 'shared/header' %>
 
-<div class="admin-groups">
-  <h1>グループテーブル</h1>
+<h1>Groups</h1>
 
-  <%= link_to 'New Group', new_admin_group_path, class: 'new-group' %>
+<%= link_to 'New Group', new_admin_group_path, class: 'btn btn-primary' %>
 
-  <table>
-    <thead>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @groups.each do |group| %>
       <tr>
-        <th>Name</th>
-        <th>Actions</th>
+        <td><%= group.name %></td>
+        <td>
+          <%= link_to 'Show', admin_group_path(group), class: 'btn btn-show' %>
+          <%= link_to 'Edit', edit_admin_group_path(group), class: 'btn btn-edit' %>
+          <%= link_to 'Delete', admin_group_path(group), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' }, class: 'btn btn-delete' %>
+        </td>
       </tr>
-    </thead>
-    <tbody>
-      <% @groups.each do |group| %>
-        <tr>
-          <td><%= group.name %></td>
-          <td>
-            <%= link_to 'Show', admin_group_path(group) %>
-            <%= link_to 'Edit', edit_admin_group_path(group) %>
-            <%= link_to 'Delete', admin_group_path(group), method: :delete, data: { confirm: 'Are you sure?' } %>
-          </td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-</div>
+    <% end %>
+  </tbody>
+</table>
