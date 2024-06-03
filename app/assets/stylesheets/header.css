@@ -35,9 +35,9 @@
 }
 
 /* ユーザー関連ボタン */
-.user-name, .logout, .login, .sign-up {
+.user-name, .logout, .login, .sign-up, .admin-link {
   text-decoration: none;
-  color:orange;
+  color:white;
   font-weight: bold;
   background-color: #2F4F4F;
   padding: 8px 12px;
@@ -45,6 +45,6 @@
   transition: background-color 0.3s ease;
 }
 
-.app-name:hover, .user-name:hover, .logout:hover, .login:hover, .sign-up:hover {
+.app-name:hover, .user-name:hover, .logout:hover, .login:hover, .sign-up:hover, .admin-link:hover {
   background-color: #1f3a3a; /* ホバー時に少し濃い色に変更 */
 }
