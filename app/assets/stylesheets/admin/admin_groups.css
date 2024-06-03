@@ -1,4 +1,4 @@
-/* app/assets/stylesheets/admin_groups.css */
+/* admin_groups.css */
 
 /* 全体のコンテナスタイル */
 .admin-groups-container {
@@ -18,56 +18,6 @@
   margin-bottom: 20px;
   color: #333;
   text-align: center;
-}
-
-.admin-groups-container .btn-primary,
-.admin-groups-container .btn-show,
-.admin-groups-container .btn-edit,
-.admin-groups-container .btn-delete {
-  display: inline-block;
-  margin: 5px;
-  padding: 10px 20px;
-  font-size: 14px;
-  font-weight: 600;
-  text-align: center;
-  text-decoration: none;
-  color: #fff;
-  border-radius: 5px;
-  transition: background-color 1.0s;
-  cursor: pointer;
-}
-
-.admin-groups-container .btn-primary {
-  background-color: #4CAF50;
-}
-
-.admin-groups-container .btn-primary:hover {
-  background-color: #45a049;
-}
-
-.admin-groups-container .btn-show {
-  background-color: #17a2b8;
-}
-
-.admin-groups-container .btn-show:hover {
-  background-color: #138496;
-}
-
-.admin-groups-container .btn-edit {
-  background-color: #ffc107;
-  color: #333;
-}
-
-.admin-groups-container .btn-edit:hover {
-  background-color: #e0a800;
-}
-
-.admin-groups-container .btn-delete {
-  background-color: #dc3545;
-}
-
-.admin-groups-container .btn-delete:hover {
-  background-color: #c82333;
 }
 
 /* テーブルのスタイル */
@@ -91,6 +41,54 @@
 
 .admin-groups-table tr:hover {
   background-color: #f5f5f5;
+}
+
+/* ボタン共通スタイル */
+.btn-primary, .btn-show, .btn-edit, .btn-delete {
+  display: inline-block;
+  height: 40px;
+  padding: 0 20px;
+  line-height: 40px;
+  letter-spacing: 1px;
+  text-align: center;
+  border:double;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #4CAF50;
+}
+
+.btn-primary:hover {
+  background-color: #45a049;
+}
+
+.btn-show {
+  background-color: #17a2b8;
+}
+
+.btn-show:hover {
+  background-color: #138496;
+}
+
+.btn-edit {
+  background-color: #ffc107;
+}
+
+.btn-edit:hover {
+  background-color: #e0a800;
+}
+
+.btn-delete {
+  background-color: #dc3545;
+}
+
+.btn-delete:hover {
+  background-color: #c82333;
 }
 
 /* フォームのスタイル */

@@ -1,0 +1,8 @@
+<!-- app/views/admin/groups/show.html.erb -->
+
+<h1><%= @group.name %></h1>
+<p><%= @group.creator %></p>
+<p><%= @group.text %></p>
+
+<%= link_to 'Edit', edit_admin_group_path(@group), class: 'btn btn-edit' %>
+<%= link_to 'Back to Groups', admin_groups_path, class: 'btn btn-primary' %>

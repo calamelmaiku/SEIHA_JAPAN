@@ -1,28 +1,28 @@
 <%= render 'shared/header' %>
 
-<div class="admin-groups-container">
-  <h1>Groups</h1>
+<div class="form-container">
+  <div class="admin-groups-form">
+    <h1>New Group</h1>
 
-  <%= link_to 'New Group', new_admin_group_path, class: 'btn btn-primary' %>
+    <%= form_with(model: @group, url: admin_groups_path, local: true) do |form| %>
+      <div class="form-group">
+        <%= form.label :name %>
+        <%= form.text_field :name, class: "form-control" %>
+      </div>
 
-  <table class="admin-groups-table">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Actions</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @groups.each do |group| %>
-        <tr>
-          <td><%= group.name %></td>
-          <td>
-            <%= link_to 'Show', admin_group_path(group), class: 'btn btn-show' %>
-            <%= link_to 'Edit', edit_admin_group_path(group), class: 'btn btn-edit' %>
-            <%= link_to 'Delete', admin_group_path(group), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' }, class: 'btn btn-delete' %>
-          </td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
+      <div class="form-group">
+        <%= form.label :creator %>
+        <%= form.text_field :creator, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= form.label :text %>
+        <%= form.text_area :text, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= form.submit 'Create Group', class: "btn btn-primary" %>
+      </div>
+    <% end %>
+  </div>
 </div>
