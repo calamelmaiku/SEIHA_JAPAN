@@ -1,0 +1,38 @@
+<%= render 'shared/header' %>
+
+<div class="form-container">
+  <div class="admin-spots-form">
+    <h1>New Spot</h1>
+
+    <%= form_with(model: [@group, @spot], local: true) do |form| %>
+      <div class="form-group">
+        <%= form.label :name %>
+        <%= form.text_field :name, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= form.label :text %>
+        <%= form.text_area :text, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= form.label :address %>
+        <%= form.text_field :address, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= form.label :latitude %>
+        <%= form.number_field :latitude, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= form.label :longitude %>
+        <%= form.number_field :longitude, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= form.submit 'Create Spot', class: "btn btn-primary" %>
+      </div>
+    <% end %>
+  </div>
+</div>

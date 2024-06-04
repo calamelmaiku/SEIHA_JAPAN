@@ -11,7 +11,8 @@ Rails.application.routes.draw do
 
   # admin という名前空間を作成。この中に定義されたルートは、全てURLの先頭に /admin が追加される。
   namespace :admin do
-    resources :groups
-    resources :spots
+    resources :groups do
+      resources :spots, except: [:index]
+    end
   end
 end
