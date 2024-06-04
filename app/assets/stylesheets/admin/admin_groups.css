@@ -1,5 +1,3 @@
-/* admin_groups.css */
-
 /* 全体のコンテナスタイル */
 .admin-groups-container {
   width: 80%;
@@ -21,25 +19,29 @@
 }
 
 /* テーブルのスタイル */
-.admin-groups-table {
+.admin-groups-table, .admin-spots-table {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 20px;
 }
 
 .admin-groups-table th,
-.admin-groups-table td {
+.admin-groups-table td,
+.admin-spots-table th,
+.admin-spots-table td {
   padding: 12px 15px;
   text-align: left;
   border-bottom: 1px solid #ddd;
 }
 
-.admin-groups-table th {
+.admin-groups-table th,
+.admin-spots-table th {
   background-color: #f2f2f2;
   color: #333;
 }
 
-.admin-groups-table tr:hover {
+.admin-groups-table tr:hover,
+.admin-spots-table tr:hover {
   background-color: #f5f5f5;
 }
 
@@ -51,7 +53,7 @@
   line-height: 40px;
   letter-spacing: 1px;
   text-align: center;
-  border:double;
+  border: double;
   border-radius: 5px;
   color: white;
   text-decoration: none;
@@ -61,6 +63,7 @@
 
 .btn-primary {
   background-color: #4CAF50;
+  margin: 20px;
 }
 
 .btn-primary:hover {

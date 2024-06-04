@@ -48,23 +48,3 @@
   display: flex;
   justify-content: center; /* 中央寄せ */
 }
-
-.btn {
-  display: inline-block;
-  height: 40px;
-  padding: 0 20px;
-  line-height: 40px;
-  letter-spacing: 1px;
-  text-align: center;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  background-color: darkslategray;
-  transition: background-color 0.3s ease;
-  cursor: pointer;
-}
-
-.btn:hover {
-  background-color: darkgray;
-}
-
