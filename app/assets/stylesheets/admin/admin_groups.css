@@ -1,5 +1,5 @@
 /* 全体のコンテナスタイル */
-.admin-groups-container {
+.admin-groups-container, .admin-spots-container {
   width: 80%;
   margin: 0 auto;
   padding: 20px;
@@ -11,7 +11,7 @@
   align-items: center;
 }
 
-.admin-groups-container h1 {
+.admin-groups-container h1, .admin-spots-container h1 {
   font-size: 24px;
   margin-bottom: 20px;
   color: #333;
@@ -102,7 +102,7 @@
   min-height: 80vh;
 }
 
-.admin-groups-form {
+.admin-groups-form, .admin-spots-form {
   width: 50%;
   margin: 0 auto;
   padding: 20px;
@@ -111,24 +111,24 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.admin-groups-form h1 {
+.admin-groups-form h1, .admin-spots-form h1 {
   font-size: 24px;
   margin-bottom: 20px;
   color: #333;
   text-align: center;
 }
 
-.admin-groups-form .form-group {
+.admin-groups-form .form-group, .admin-spots-form .form-group {
   margin-bottom: 15px;
 }
 
-.admin-groups-form .form-group label {
+.admin-groups-form .form-group label, .admin-spots-form .form-group label {
   display: block;
   font-weight: bold;
   margin-bottom: 5px;
 }
 
-.admin-groups-form .form-control {
+.admin-groups-form .form-control, .admin-spots-form .form-control {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
