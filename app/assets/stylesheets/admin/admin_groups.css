@@ -20,7 +20,7 @@
 
 /* テーブルのスタイル */
 .admin-groups-table, .admin-spots-table {
-  width: 100%;
+  width: 90%;
   border-collapse: collapse;
   margin-bottom: 20px;
 }
