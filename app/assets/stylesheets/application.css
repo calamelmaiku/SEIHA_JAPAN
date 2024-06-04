@@ -41,6 +41,27 @@
   box-sizing: border-box;
 }
 
+/* ボタンのスタイル */
+.btn {
+  display: inline-block;
+  height: 40px;
+  padding: 0 20px;
+  line-height: 40px;
+  letter-spacing: 1px;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  background-color: darkslategray;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: darkgray;
+}
+
 /* 達成率 */
 .completion-rate {
   font-size: 16px;

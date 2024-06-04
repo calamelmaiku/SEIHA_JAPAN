@@ -1,4 +1,3 @@
-<!-- app/views/admin/groups/index.html.erb -->
 <%= render 'shared/header' %>
 
 <h1>Groups</h1>
@@ -9,6 +8,8 @@
   <thead>
     <tr>
       <th>Name</th>
+      <th>Creator</th>
+      <th>Text</th>
       <th>Actions</th>
     </tr>
   </thead>
@@ -16,6 +17,8 @@
     <% @groups.each do |group| %>
       <tr>
         <td><%= group.name %></td>
+        <td><%= group.creator %></td>
+        <td><%= group.text %></td>
         <td>
           <%= link_to 'Show', admin_group_path(group), class: 'btn-show' %>
           <%= link_to 'Edit', edit_admin_group_path(group), class: 'btn-edit' %>

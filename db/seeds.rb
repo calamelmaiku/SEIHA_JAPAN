@@ -60,5 +60,6 @@ User.create!(
   name: 'seiha',
   email: 'seiha@seiha.com',
   password: 'seiha1818',
-  password_confirmation: 'seiha1818'
+  password_confirmation: 'seiha1818',
+  admin: true
 )
