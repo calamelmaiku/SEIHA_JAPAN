@@ -3,9 +3,6 @@
 <div class="admin-groups-container">
   <div class="left-aligned-content">
     <h1><%= @group.name %></h1>
-    <p><%= @group.creator %></p>
-    <p><%= @group.text %></p>
-
     <%= link_to 'New Spot', new_admin_group_spot_path(@group), class: 'btn btn-primary' %>
   </div>
   <div class="table-container">

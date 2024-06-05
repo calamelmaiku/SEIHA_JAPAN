@@ -21,14 +21,13 @@
 /* 左寄せのコンテンツスタイル */
 .left-aligned-content {
   width: 100%;
-  text-align: left;
+  display: flex;
+  align-items: center;
 }
 
 .left-aligned-content h1, .left-aligned-content h2 {
-  text-align: left;
   margin-bottom: 10px;
 }
-
 /* テーブルコンテナのスタイル */
 .table-container {
   width: 100%;
