@@ -21,13 +21,12 @@
 /* 左寄せのコンテンツスタイル */
 .left-aligned-content {
   width: 100%;
-  max-width: 1000px;
-  margin-bottom: 20px;
   text-align: left;
 }
 
 .left-aligned-content h1, .left-aligned-content h2 {
   text-align: left;
+  margin-bottom: 10px;
 }
 
 /* テーブルコンテナのスタイル */
@@ -107,7 +106,24 @@
 }
 
 /* ボタン共通スタイル */
-.btn-primary, .btn-show, .btn-edit, .btn-delete {
+
+.btn-primary {
+  display: inline-block;
+  height: 40px;
+  padding: 0 20px;
+  line-height: 40px;
+  letter-spacing: 1px;
+  text-align: center;
+  border: double;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 0; /* マージンをリセットして左寄せ */
+}
+
+.btn-show, .btn-edit, .btn-delete {
   display: inline-block;
   height: 40px;
   padding: 0 20px;
