@@ -1,7 +1,7 @@
 /* 全体のコンテナスタイル */
 .admin-groups-container, .admin-spots-container {
-  width: 80%;
-  margin: 0 auto;
+  width: 95%;
+  margin: 20px auto;
   padding: 20px;
   background-color: #f9f9f9;
   border-radius: 5px;
@@ -18,9 +18,29 @@
   text-align: center;
 }
 
+/* 左寄せのコンテンツスタイル */
+.left-aligned-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.left-aligned-content h1, .left-aligned-content h2 {
+  margin-bottom: 10px;
+}
+/* テーブルコンテナのスタイル */
+.table-container {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
 /* テーブルのスタイル */
 .admin-groups-table, .admin-spots-table {
-  width: 90%;
+  width: 100%;
   border-collapse: collapse;
   margin-bottom: 20px;
 }
@@ -45,8 +65,64 @@
   background-color: #f5f5f5;
 }
 
+/* グループテーブル幅指定 */
+.col-group-name {
+  width: 15%;
+}
+
+.col-group-creator {
+  width: 15%;
+}
+
+.col-group-text {
+  width: 45%;
+}
+
+.col-group-actions {
+  width: 25%;
+}
+
+/* スポットテーブル幅指定 */
+
+.col-spot-name {
+  width: 15%;
+}
+
+.col-spot-text {
+  width: 40%;
+}
+
+.col-spot-address {
+  width: 15%;
+}
+
+.col-spot-latitude, .col-spot-longitude {
+  width: 5%;
+}
+
+.col-spot-actions {
+  width: 20%;
+}
+
 /* ボタン共通スタイル */
-.btn-primary, .btn-show, .btn-edit, .btn-delete {
+
+.btn-primary {
+  display: inline-block;
+  height: 40px;
+  padding: 0 20px;
+  line-height: 40px;
+  letter-spacing: 1px;
+  text-align: center;
+  border: double;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 0; /* マージンをリセットして左寄せ */
+}
+
+.btn-show, .btn-edit, .btn-delete {
   display: inline-block;
   height: 40px;
   padding: 0 20px;
