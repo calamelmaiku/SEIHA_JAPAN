@@ -1,40 +1,44 @@
 <%= render 'shared/header' %>
 
-<h1><%= @group.name %></h1>
-<p><%= @group.creator %></p>
-<p><%= @group.text %></p>
+<div class="admin-groups-container">
+  <div class="left-aligned-content">
+    <h1><%= @group.name %></h1>
+    <p><%= @group.creator %></p>
+    <p><%= @group.text %></p>
 
-<%= link_to 'Edit Group', edit_admin_group_path(@group), class: 'btn' %>
-<%= link_to 'Back to Groups', admin_groups_path, class: 'btn' %>
+    <%= link_to 'Edit Group', edit_admin_group_path(@group), class: 'btn btn-edit' %>
+    <%= link_to 'Back to Groups', admin_groups_path, class: 'btn btn-primary' %>
 
-<h2>Spots</h2>
-<%= link_to 'New Spot', new_admin_group_spot_path(@group), class: 'btn-primary' %>
-
-<table class="admin-spots-table">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Text</th>
-      <th>Address</th>
-      <th>Latitude</th>
-      <th>Longitude</th>
-      <th>Actions</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @group.spots.each do |spot| %>
-      <tr>
-        <td><%= spot.name %></td>
-        <td><%= spot.text %></td>
-        <td><%= spot.address %></td>
-        <td><%= spot.latitude %></td>
-        <td><%= spot.longitude %></td>
-        <td>
-          <%= link_to 'Edit', edit_admin_group_spot_path(@group, spot), class: 'btn-edit' %>
-          <%= link_to 'Delete', admin_group_spot_path(@group, spot), method: :delete, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' }, class: 'btn-delete' %>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
+    <h2>Spots</h2>
+    <%= link_to 'New Spot', new_admin_group_spot_path(@group), class: 'btn btn-primary' %>
+  </div>
+  <div class="table-container">
+    <table class="admin-spots-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Text</th>
+          <th>Address</th>
+          <th>Latitude</th>
+          <th>Longitude</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @group.spots.each do |spot| %>
+          <tr>
+            <td><%= spot.name %></td>
+            <td><%= spot.text %></td>
+            <td><%= spot.address %></td>
+            <td><%= spot.latitude %></td>
+            <td><%= spot.longitude %></td>
+            <td>
+              <%= link_to 'Edit', edit_admin_group_spot_path(@group, spot), class: 'btn btn-edit' %>
+              <%= link_to 'Delete', admin_group_spot_path(@group, spot), method: :delete, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' }, class: 'btn btn-delete' %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,7 +1,7 @@
 /* 全体のコンテナスタイル */
 .admin-groups-container, .admin-spots-container {
-  width: 80%;
-  margin: 0 auto;
+  width: 90%;
+  margin: 20px auto;
   padding: 20px;
   background-color: #f9f9f9;
   border-radius: 5px;
@@ -18,9 +18,32 @@
   text-align: center;
 }
 
+/* 左寄せのコンテンツスタイル */
+.left-aligned-content {
+  width: 100%;
+  max-width: 1000px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.left-aligned-content h1, .left-aligned-content h2 {
+  text-align: left;
+}
+
+/* テーブルコンテナのスタイル */
+.table-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
 /* テーブルのスタイル */
 .admin-groups-table, .admin-spots-table {
-  width: 90%;
+  width: 100%;
   border-collapse: collapse;
   margin-bottom: 20px;
 }
