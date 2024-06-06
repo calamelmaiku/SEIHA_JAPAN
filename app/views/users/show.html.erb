@@ -5,12 +5,15 @@
 
   <h2>達成率</h2>
 
-  <% @group_completion_rates.each do |group_name, completion_rate| %>
-    <div class="group-completion-chart">
-      <h3><%= group_name %></h3>
-      <%= pie_chart [["達成", completion_rate], ["未達成", 100 - completion_rate]], donut: true, colors: ["#4CAF50", "#FF5722"] %>
-    </div>
-  <% end %>
+  <div class="group-completion-charts">
+    <% @group_completion_rates.each do |group_name, completion_rate| %>
+      <div class="group-completion-chart">
+        <h3><%= group_name %></h3>
+        <% colors = completion_rate == 100 ? ["#FFD700", "transparent"] : ["#4CAF50", "transparent"] %>
+        <%= pie_chart [["達成", completion_rate], ["未達成", 100 - completion_rate]], donut: true, width: "150px", height: "150px", colors: colors, legend: false %>
+      </div>
+    <% end %>
+  </div>
 
   <table class="user-groups-table">
     <thead>
