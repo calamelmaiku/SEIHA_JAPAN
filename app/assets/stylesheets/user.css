@@ -135,6 +135,15 @@
   color: #333;
 }
 
+.user-details-container .group-completion-chart {
+  margin-bottom: 40px;
+}
+
+.user-details-container .group-completion-chart h3 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
 .user-groups-table {
   width: 100%;
   border-collapse: collapse;

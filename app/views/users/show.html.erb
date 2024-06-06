@@ -3,8 +3,15 @@
 <div class="user-details-container">
   <%= link_to @user.name, edit_user_path(@user), class: "user-edit" %>
 
-
   <h2>達成率</h2>
+
+  <% @group_completion_rates.each do |group_name, completion_rate| %>
+    <div class="group-completion-chart">
+      <h3><%= group_name %></h3>
+      <%= pie_chart [["達成", completion_rate], ["未達成", 100 - completion_rate]], donut: true, colors: ["#4CAF50", "#FF5722"] %>
+    </div>
+  <% end %>
+
   <table class="user-groups-table">
     <thead>
       <tr>
@@ -16,7 +23,7 @@
       <% @groups.each do |group| %>
         <tr>
           <td><%= group.name %></td>
-          <td><%= @group_completion_rates[group.id] %>%</td>
+          <td><%= @group_completion_rates[group.name] %>%</td>
         </tr>
       <% end %>
     </tbody>

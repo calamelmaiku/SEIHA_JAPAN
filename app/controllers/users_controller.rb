@@ -18,6 +18,7 @@ class UsersController < ApplicationController
   end
 
   private
+
   def set_user
     @user = User.find(params[:id])
   end
@@ -26,7 +27,7 @@ class UsersController < ApplicationController
     group_completion_rates = {}
 
     Group.all.each do |group|
-      group_completion_rates[group.id] = calculate_completion_rate(user, group.spots)
+      group_completion_rates[group.name] = calculate_completion_rate(user, group.spots)
     end
 
     group_completion_rates
@@ -42,3 +43,4 @@ class UsersController < ApplicationController
     params.require(:user).permit(:name, :email)
   end
 end
+
