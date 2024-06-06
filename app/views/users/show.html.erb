@@ -1,9 +1,10 @@
 <%= render 'shared/header' %>
 
 <div class="user-details-container">
-  <h1><%= @user.name %>の詳細ページ</h1>
+  <%= link_to @user.name, edit_user_path(@user), class: "user-edit" %>
 
-  <h2>グループ達成率</h2>
+
+  <h2>達成率</h2>
   <table class="user-groups-table">
     <thead>
       <tr>
