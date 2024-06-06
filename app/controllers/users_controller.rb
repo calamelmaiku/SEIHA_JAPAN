@@ -3,7 +3,7 @@ class UsersController < ApplicationController
 
   def show
     @groups = Group.all
-    @user_groups = @user.groups
+    @group_completion_rates = calculate_group_completion_rates(@user)
   end
 
   def edit
@@ -20,6 +20,22 @@ class UsersController < ApplicationController
   private
   def set_user
     @user = User.find(params[:id])
+  end
+
+  def calculate_group_completion_rates(user)
+    group_completion_rates = {}
+
+    Group.all.each do |group|
+      group_completion_rates[group.id] = calculate_completion_rate(user, group.spots)
+    end
+
+    group_completion_rates
+  end
+
+  def calculate_completion_rate(user, spots)
+    total_spots = spots.count
+    visited_spots = spots.joins(:visiteds).where(visiteds: { visited: true, user_id: user.id }).count
+    total_spots > 0 ? (visited_spots.to_f / total_spots * 100).round(2) : 0
   end
 
   def user_params

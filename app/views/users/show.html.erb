@@ -1,0 +1,23 @@
+<%= render 'shared/header' %>
+
+<div class="user-details-container">
+  <h1><%= @user.name %>の詳細ページ</h1>
+
+  <h2>グループ達成率</h2>
+  <table class="user-groups-table">
+    <thead>
+      <tr>
+        <th>グループ名</th>
+        <th>達成率</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @groups.each do |group| %>
+        <tr>
+          <td><%= group.name %></td>
+          <td><%= @group_completion_rates[group.id] %>%</td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
