@@ -144,14 +144,26 @@
 }
 
 .user-details-container .group-completion-chart {
+  position: relative;
   text-align: center;
   width: 150px;
-  flex: 0 0 150px; /* グラフの幅を固定 */
+  flex: 0 0 150px;
 }
 
-.user-details-container .group-completion-chart h3 {
-  margin-bottom: 10px;
-  font-size: 16px;
+.user-details-container .group-completion-chart canvas {
+  display: block;
+  margin: auto;
+}
+
+.user-details-container .group-completion-chart::after {
+  content: attr(data-group-name);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
 }
 
 /* ユーザー編集ボタン */
