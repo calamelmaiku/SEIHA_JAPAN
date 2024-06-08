@@ -8,7 +8,7 @@
         <div class="group">
           <div class="group-name">
             <% completion_rate = user_signed_in? ? @group_completion_rates[group.id] : nil %>
-            <%= link_to "#{completion_rate == 100 ? '◎' : '○'}#{group.name}", group_path(group), class: "group-name" %>
+            <%= link_to "#{completion_rate == 100 ? '◎' : '○'}#{group.name}", group_path(group), data: { turbo: false }, class: "group-name" %>
             <% if completion_rate %>
               <span class="completion-rate">(<%= completion_rate %>%)</span>
             <% end %>
