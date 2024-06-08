@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("turbo:load", function() {
   let map;
   let markers = [];
 
@@ -29,7 +29,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // スポット詳細ページの場合
     if (currentUrl.match(/\/groups\/\d+\/spots\/\d+/)) {
-      console.log("Updating map with single spot");
       if (window.spotData) {
         const spot = window.spotData;
         const marker = new google.maps.Marker({

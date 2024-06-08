@@ -8,7 +8,6 @@
   height: 95vh;
 }
 
-/* アカウントページ内のコンテンツエリア */
 .account-page__inner {
   width: 80%;
   max-width: 1200px;
@@ -19,24 +18,20 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* 左側のエリア（ヘッダーエリア） */
 .account-page__inner--left {
   width: 50%;
 }
 
-/* 右側のエリア（フォームエリア） */
 .account-page__inner--right {
   width: 50%;
 }
 
-/* clearfix用のスタイル */
 .account-page__inner::after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* ヘッダーのタイトル */
 .account-page__header h2 {
   margin-bottom: 10px;
   letter-spacing: 3px;
@@ -45,7 +40,6 @@
   color: darkslategray;
 }
 
-/* ヘッダーのサブタイトル */
 .account-page__header h5 {
   margin-bottom: 20px;
   font-size: 14px;
@@ -53,7 +47,6 @@
   color: darkslategray;
 }
 
-/* ボタン */
 .account-page .btn {
   display: inline-block;
   height: 50px;
@@ -73,12 +66,10 @@
   background-color: darkgreen;
 }
 
-/* フィールド全体 */
 .account-page .field {
   margin-bottom: 20px;
 }
 
-/* フィールドのラベル */
 .account-page .field .field-label {
   padding: 10px 0;
   letter-spacing: 1px;
@@ -87,7 +78,6 @@
   color: darkslategray;
 }
 
-/* フィールドの入力エリア */
 .account-page .field .field-input input {
   width: 100%;
   padding: 10px;
@@ -121,4 +111,70 @@
   margin: 0;
   padding: 0;
   font-size: 13px;
+}
+
+/* ユーザー詳細ページ */
+.user-details-container {
+  width: 90%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.user-details-container h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.user-details-container h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.user-details-container .group-completion-charts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.user-details-container .group-completion-chart {
+  position: relative;
+  text-align: center;
+  width: 150px;
+  flex: 0 0 150px;
+}
+
+.user-details-container .group-completion-chart canvas {
+  display: block;
+  margin: auto;
+}
+
+.user-details-container .group-completion-chart::after {
+  content: attr(data-group-name);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* ユーザー編集ボタン */
+.user-edit {
+  color: darkslategray;
+  font-size: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.user-edit:hover {
+  color: orangered;
 }

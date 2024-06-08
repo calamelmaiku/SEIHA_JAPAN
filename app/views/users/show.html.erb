@@ -1,0 +1,19 @@
+<%= render 'shared/header' %>
+
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<div class="user-details-container">
+  <%= link_to @user.name, edit_user_path(@user), class: "user-edit" %>
+
+  <h2>達成率</h2>
+
+  <div class="group-completion-charts">
+    <% @group_completion_rates.each do |group_name, completion_rate| %>
+      <div class="group-completion-chart" data-completion-rate="<%= completion_rate %>" data-group-name="<%= group_name %>">
+        <canvas width="150" height="150"></canvas>
+      </div>
+    <% end %>
+  </div>
+</div>
