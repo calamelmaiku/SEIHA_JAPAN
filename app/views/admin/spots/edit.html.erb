@@ -4,6 +4,17 @@
   <div class="admin-groups-form">
     <h1>Edit Spot</h1>
 
+    <% if @spot.errors.any? %>
+      <div class="error-messages">
+        <h2>There were errors:</h2>
+        <ul>
+          <% @spot.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
     <%= form_with(model: [@group, @spot], url: admin_group_spots_path(@group), local: true, method: :patch) do |form| %>
       <div class="form-group">
         <%= form.label :name %>
