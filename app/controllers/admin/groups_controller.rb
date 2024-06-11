@@ -1,6 +1,6 @@
-# app/controllers/admin/groups_controller.rb
 class Admin::GroupsController < ApplicationController
   before_action :authenticate_user!
+  before_action :check_admin
 
   def index
     @groups = Group.all
