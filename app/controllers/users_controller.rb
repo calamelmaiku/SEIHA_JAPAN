@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_user, only: [:show]
+  before_action :correct_user, only: [:show, :edit, :update]
 
   def show
     @groups = Group.all
@@ -23,6 +25,10 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+  def correct_user
+    redirect_to(root_path) unless current_user == @user
+  end
+
   def calculate_group_completion_rates(user)
     group_completion_rates = {}
 
@@ -43,4 +49,3 @@ class UsersController < ApplicationController
     params.require(:user).permit(:name, :email)
   end
 end
-
