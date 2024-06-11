@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   end
   resources :users, only: [:show, :edit, :update]
 
-  # admin という名前空間を作成。この中に定義されたルートは、全てURLの先頭に /admin が追加される。
+  # admin という名前空間を作成 全てURLの先頭に /admin がつく
   namespace :admin do
     resources :groups do
       resources :spots, except: [:index]
