@@ -19,7 +19,7 @@ class Admin::GroupsController < ApplicationController
     if @group.save
       redirect_to admin_groups_path(@group), notice: 'Group was successfully created.'
     else
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 
@@ -32,7 +32,7 @@ class Admin::GroupsController < ApplicationController
     if @group.update(group_params)
       redirect_to admin_groups_path(@group), notice: 'Group was successfully updated.'
     else
-      render :edit
+      render :edit, status: :unprocessable_entity
     end
   end
 
