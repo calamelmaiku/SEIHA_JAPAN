@@ -15,15 +15,14 @@ class SpotsController < ApplicationController
     @visited.visited = !@visited.visited
 
     if @visited.save
-      redirect_to group_spot_path(@group, @spot), notice: '訪問状態が更新されました。'
+      redirect_to group_spot_path(@group, @spot)
     else
-      redirect_to group_spot_path(@group, @spot), alert: '訪問状態の更新に失敗しました。'
+      redirect_to group_spot_path(@group, @spot)
     end
   end
 
   private
 
-  # グループとスポットを設定するメソッド
   def set_group_and_spot
     @group = Group.find(params[:group_id])
     @spot = Spot.find(params[:id])
