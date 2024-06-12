@@ -50,6 +50,14 @@ document.addEventListener("turbo:load", function() {
         // スポットの位置に地図をズーム
         bounds.extend(marker.position); // マーカーの位置を範囲に追加
         map.fitBounds(bounds); // マーカーの範囲に地図を調整
+
+        // スポット詳細ページの場合は少しズームアウト
+        const zoomChangeBoundsListener = google.maps.event.addListenerOnce(map, 'bounds_changed', function(event) {
+          if (this.getZoom() > 15) {
+            this.setZoom(10); // 任意のズームレベルに設定
+          }
+        });
+        setTimeout(function() { google.maps.event.removeListener(zoomChangeBoundsListener) }, 2000);
       }
     }
     // グループ詳細ページの場合
