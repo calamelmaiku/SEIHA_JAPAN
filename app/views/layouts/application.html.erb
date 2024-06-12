@@ -22,7 +22,7 @@
           // 新しい script 要素を作成
           var script = document.createElement('script');
           // Google Maps API のスクリプトのソースを設定
-          script.src = `https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAPS_API_KEY'] %>&callback=initMap`;
+          script.src = `https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAPS_API_KEY'] %>&callback=initMap&v=weekly&libraries=marker`;
           // スクリプトを非同期で読み込むように設定
           script.async = true;
           // スクリプトの読み込みを遅延させるように設定
