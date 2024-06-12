@@ -37,7 +37,7 @@ document.addEventListener("turbo:load", function() {
       if (window.spotData) {
         const spot = window.spotData;
         const markerElement = document.createElement('div');
-        markerElement.innerHTML = `<div style="background-color: white; padding: 5px; border-radius: 5px; box-shadow: 0 0 5px rgba(0,0,0,0.3);">${spot.name}</div>`;
+        markerElement.innerHTML = `<div style="background-color: darkslategray; color: white; padding: 10px; border-radius: 10px; box-shadow: 0 0 5px rgba(0,0,0,0.3); font-weight: bold;">${spot.name}</div>`;
 
         const marker = new AdvancedMarkerElement({
           position: { lat: spot.latitude, lng: spot.longitude },
@@ -65,7 +65,7 @@ document.addEventListener("turbo:load", function() {
       if (window.spotsData) {
         window.spotsData.forEach(spot => {
           const markerElement = document.createElement('div');
-          markerElement.innerHTML = `<div style="background-color: white; padding: 5px; border-radius: 5px; box-shadow: 0 0 5px rgba(0,0,0,0.3);">${spot.name}</div>`;
+          markerElement.innerHTML = `<div style="background-color: darkslategray; color: white; padding: 10px; border-radius: 10px; box-shadow: 0 0 5px rgba(0,0,0,0.3); font-weight: bold;">${spot.name}</div>`;
 
           const marker = new AdvancedMarkerElement({
             position: { lat: spot.latitude, lng: spot.longitude },
