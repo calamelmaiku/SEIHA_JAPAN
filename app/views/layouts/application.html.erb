@@ -22,7 +22,7 @@
           // 新しい script 要素を作成
           var script = document.createElement('script');
           // Google Maps API のスクリプトのソースを設定
-          script.src = `https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAPS_API_KEY'] %>&callback=initMap`;
+          script.src = `https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAPS_API_KEY'] %>&callback=initMap&v=weekly&libraries=marker`;
           // スクリプトを非同期で読み込むように設定
           script.async = true;
           // スクリプトの読み込みを遅延させるように設定
@@ -35,25 +35,6 @@
         }
       });
     </script>
-    <script src="https://cdn.rawgit.com/googlemaps/v3-utility-library/master/infobox/src/infobox.js"></script>
-    <style>
-      .gm-style-iw {
-        max-width: auto !important; /* 吹き出しの最大幅を設定 */
-        font-size: 10px !important; /* 吹き出し内のフォントサイズを設定 */
-        background-color: #fff; /* 背景色を白に設定 */
-        border: 1px solid #ccc; /* 境界線を薄い灰色に設定 */
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); /* 影を追加 */
-        border-radius: 8px; /* 角を丸くする */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 4px !important; /* 吹き出し内のパディングを設定 */
-        height: auto !important; /* 吹き出しの高さを自動調整 */
-      }
-      .gm-ui-hover-effect {
-        display: none !important; /* 閉じるボタンを非表示に */
-      }
-    </style>
     <% end %>
   </body>
 </html>

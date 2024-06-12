@@ -1,6 +1,6 @@
 class Spot < ApplicationRecord
   belongs_to :group
-  has_many :visiteds
+  has_many :visiteds, dependent: :destroy
   has_many :users, through: :visiteds
 
   validates :name, presence: true

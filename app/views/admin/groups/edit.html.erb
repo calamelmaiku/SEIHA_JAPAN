@@ -4,6 +4,17 @@
   <div class="admin-groups-form">
     <h1>Edit Group</h1>
 
+    <% if @group.errors.any? %>
+      <div class="error-messages">
+        <h2>There were errors:</h2>
+        <ul>
+          <% @group.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
     <%= form_with(model: @group, url: admin_group_path(@group), local: true) do |form| %>
       <div class="form-group">
         <%= form.label :name %>
