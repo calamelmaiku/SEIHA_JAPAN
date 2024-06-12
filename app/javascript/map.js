@@ -24,6 +24,7 @@ document.addEventListener("turbo:load", function() {
     markers.forEach(marker => marker.setMap(null));
     markers = [];
 
+    const bounds = new google.maps.LatLngBounds(); // マーカーの範囲を保持するオブジェクト
 
     const currentUrl = window.location.pathname;
 
@@ -47,8 +48,8 @@ document.addEventListener("turbo:load", function() {
         infoWindow.open(map, marker);
 
         // スポットの位置に地図をズーム
-        map.setCenter({ lat: spot.latitude, lng: spot.longitude });
-        map.setZoom(15);
+        bounds.extend(marker.position); // マーカーの位置を範囲に追加
+        map.fitBounds(bounds); // マーカーの範囲に地図を調整
       }
     }
     // グループ詳細ページの場合
@@ -69,7 +70,10 @@ document.addEventListener("turbo:load", function() {
 
           // 吹き出しを常に表示
           infoWindow.open(map, marker);
+
+          bounds.extend(marker.position); // マーカーの位置を範囲に追加
         });
+        map.fitBounds(bounds); // マーカーの範囲に地図を調整
       }
     }
   }
