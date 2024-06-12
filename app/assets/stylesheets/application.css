@@ -13,7 +13,9 @@
  *= require_self
  *= require_tree ./admin
  *= require_tree ./group
+ *= require_tree ./shared
  *= require_tree ./spot
+ *= require_tree ./user
  *= require_tree .
  */
 
