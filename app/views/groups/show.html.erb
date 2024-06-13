@@ -9,18 +9,12 @@
     <div class="group-detail">
       <!-- グループ名を表示 -->
       <div class="group-group-name">
-        <%= @completion_rate == 100 ? '◎' : '○' %>
-        <span class="group-name"><%= @group.name %></span>
+        <span class="group-name"><%= @completion_rate == 100 ? '◎' : '○' %><%= @group.name %></span>
         <span class="completion-rate">(<%= @completion_rate %>%)</span>
-        <% if @completion_rate == 100 %>
-          <span class="medal">
-            <img src="<%= asset_path('medals/gold.png') %>" width="30" alt="Gold medal" >
-          </span>
-        <% end %>
       </div>
       <!-- グループの作成者を表示 -->
       <div class="group-creator">
-        作成者: <%= @group.creator %>
+        creator：<%= @group.creator %>
       </div>
       <!-- グループの説明文を表示 -->
       <div class="group-text">
