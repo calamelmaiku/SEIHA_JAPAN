@@ -25,3 +25,31 @@
 .group-name:hover {
   color: orangered;
 }
+
+/* スマートフォン用のスタイル */
+@media (max-width: 600px) {
+  .groups {
+    margin: 5px;
+    padding: 0;
+  }
+
+  .group {
+    padding: 10px;
+    margin-bottom: 15px;
+  }
+
+  .group-text {
+    font-size: 16px;
+  }
+
+  /* 名前フォント */
+  .group-name {
+    font-size: 24px;
+  }
+
+  /* 達成率を縦並びへ */
+  .group-name-container {
+    display: flex;
+    flex-direction: column;
+  }
+}

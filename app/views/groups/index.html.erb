@@ -6,16 +6,11 @@
     <div class="groups">
       <% @groups.each do |group| %>
         <div class="group">
-          <div class="group-name">
+          <div class="group-name-container">
             <% completion_rate = user_signed_in? ? @group_completion_rates[group.id] : nil %>
             <%= link_to "#{completion_rate == 100 ? '◎' : '○'}#{group.name}", group_path(group), data: { turbo: false }, class: "group-name" %>
             <% if completion_rate %>
               <span class="completion-rate">(<%= completion_rate %>%)</span>
-            <% end %>
-            <% if completion_rate == 100 %>
-              <span class="medal">
-                <img src="<%= asset_path('medals/gold.png') %>" width="30" alt="Gold medal" >
-              </span>
             <% end %>
           </div>
           <div class="group-text">

@@ -102,3 +102,12 @@
 .error-messages li {
   color: #ff0000;
 }
+
+/* スマートフォン用のスタイル */
+@media (max-width: 600px) {
+.completion-rate {
+  font-size: 14px;
+  margin-left: 0;
+  margin-top: 5px;
+}
+}
