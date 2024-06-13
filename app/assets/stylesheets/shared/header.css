@@ -7,6 +7,7 @@
   justify-content: space-between;
   align-items: center;
   border-bottom: 2px solid white;
+  position: relative; /* メニューの位置調整のため */
 }
 
 .bar {
@@ -23,28 +24,67 @@
   font-weight: bold;
   background-color: #2F4F4F;
   border-radius: 5px;
-  margin-left:5vh ;
+  margin-left: 5vh;
   transition: background-color 0.3s ease;
 }
 
 .lists-right {
-  display: flex;
-  justify-content: space-around;
+  display: none; /* 初期状態では非表示 */
+  flex-direction: column;
   list-style: none;
   padding: 4px;
+  background-color: darkslategray; /* 背景色を追加 */
+  position: absolute; /* 位置を絶対位置に */
+  top: 5vh; /* ヘッダーの下に配置 */
+  right: 0; /* 右端に配置 */
+  width: 200px; /* メニューの幅を設定 */
 }
 
-/* ユーザー関連ボタン */
 .user-name, .logout, .login, .sign-up, .admin-link {
   text-decoration: none;
-  color:white;
+  color: white;
   font-weight: bold;
   background-color: #2F4F4F;
   padding: 8px 12px;
   border-radius: 5px;
   transition: background-color 0.3s ease;
+  display: block; /* リストアイテムをブロック要素に */
+  margin: 5px 0; /* アイテム間のスペースを追加 */
 }
 
 .app-name:hover, .user-name:hover, .logout:hover, .login:hover, .sign-up:hover, .admin-link:hover {
   background-color: #1f3a3a; /* ホバー時に少し濃い色に変更 */
+}
+
+/* ハンバーガーメニューのスタイル */
+.menu-icon {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  margin-right: 5vh;
+}
+
+.menu-icon span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px;
+  transition: all 0.3s ease;
+}
+
+/* メニューが開いたときのスタイル */
+.menu-icon.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-icon.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-icon.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.menu-icon.active + .lists-right {
+  display: flex;
 }
