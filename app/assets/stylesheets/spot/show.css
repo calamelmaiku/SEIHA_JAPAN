@@ -4,8 +4,9 @@
 
 .group-spot-title {
   display: flex;
-  align-items: center; /* 垂直方向のセンタリング */
-  gap: 10px; /* 要素間のスペース */
+  flex-direction: column;
+  align-items: flex-start; /* スマートフォンで縦方向に */
+  gap: 10px;
   margin-bottom: 15px;
 }
 
@@ -44,7 +45,60 @@
 
 /* ボタンのスタイル */
 .spot-buttons {
-  margin-top: 20px;
   display: flex;
-  justify-content: center; /* 中央寄せ */
+  justify-content: center;
+}
+
+/* ボタンのスタイル */
+.btn-visited {
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  letter-spacing: 1px;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  background-color:  darkslategray; /* イッタボタンのデフォルト色 */
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-visited.visited {
+  background-color: rgba(47, 79, 79, 0.786); /* コレカラボタンの色 */
+}
+
+.btn-visited:hover {
+  background-color: darkgray;
+}
+
+/* スマートフォン用のスタイル */
+@media (max-width: 600px) {
+  .spot-detail {
+    margin: 10px;
+  }
+
+  .group-spot-title {
+    gap: 5px;
+  }
+
+  .spot-name {
+    font-size: 20px;
+  }
+
+  .group-spot-name {
+    font-size: 16px;
+    padding: 5px 0;
+  }
+
+  .spot-text {
+    font-size: 16px;
+    padding: 5px 0;
+  }
+
+  .spot-address {
+    font-size: 16px;
+    padding: 5px 0;
+  }
 }

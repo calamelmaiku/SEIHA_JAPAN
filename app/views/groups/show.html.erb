@@ -1,32 +1,19 @@
 <%# CSS・・・assets/stylesheets/group/show.css %>
-<!-- 共通ヘッダーを読み込む -->
 <%= render 'shared/header' %>
 
 <div class="wrapper">
-  <!-- サイドバーやその他の要素を囲む -->
   <div class="chanel">
-    <!-- グループ詳細情報を表示する領域 -->
     <div class="group-detail">
-      <!-- グループ名を表示 -->
       <div class="group-group-name">
-        <%= @completion_rate == 100 ? '◎' : '○' %>
-        <span class="group-name"><%= @group.name %></span>
+        <span class="group-name"><%= @completion_rate == 100 ? '◎' : '○' %><%= @group.name %></span>
         <span class="completion-rate">(<%= @completion_rate %>%)</span>
-        <% if @completion_rate == 100 %>
-          <span class="medal">
-            <img src="<%= asset_path('medals/gold.png') %>" width="30" alt="Gold medal" >
-          </span>
-        <% end %>
       </div>
-      <!-- グループの作成者を表示 -->
       <div class="group-creator">
-        作成者: <%= @group.creator %>
+        creator：<%= @group.creator %>
       </div>
-      <!-- グループの説明文を表示 -->
       <div class="group-text">
         <%= @group.text %>
       </div>
-      <!-- スポット名をリストで表示 -->
       <div class="group-spots">
         <h3>スポット一覧</h3>
         <div class="spot-list">
@@ -38,7 +25,7 @@
           <% end %>
         </div>
       </div>
-      <!-- Googleマップを表示するためのプレースホルダー -->
+      <!-- Googleマップを表示 -->
       <div id='map'></div>
     </div>
   </div>

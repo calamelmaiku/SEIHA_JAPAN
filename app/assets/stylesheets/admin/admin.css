@@ -22,12 +22,14 @@
 .left-aligned-content {
   width: 100%;
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
-.left-aligned-content h1, .left-aligned-content h2 {
+.left-aligned-content h1 {
   margin-bottom: 10px;
 }
+
 /* テーブルコンテナのスタイル */
 .table-container {
   width: 100%;
@@ -83,7 +85,6 @@
 }
 
 /* スポットテーブル幅指定 */
-
 .col-spot-name {
   width: 15%;
 }
@@ -104,16 +105,22 @@
   width: 20%;
 }
 
-/* ボタン共通スタイル */
+/* アクションボタンコンテナのスタイル */
+.action-buttons {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
 
+/* ボタン共通スタイル */
 .btn-primary {
   display: inline-block;
-  height: 40px;
-  padding: 0 20px;
-  line-height: 40px;
+  padding: 5px;
+  font-size: 14px;
   letter-spacing: 1px;
+  font-weight: bold;
   text-align: center;
-  border: double;
+  border: none;
   border-radius: 5px;
   color: white;
   text-decoration: none;
@@ -124,17 +131,17 @@
 
 .btn-show, .btn-edit, .btn-delete {
   display: inline-block;
-  height: 40px;
-  padding: 0 20px;
-  line-height: 40px;
+  padding: 5px;
+  font-size: 14px;
   letter-spacing: 1px;
   text-align: center;
-  border: double;
+  border: none;
   border-radius: 5px;
   color: white;
   text-decoration: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  width: 70px;
 }
 
 .btn-primary {
@@ -210,4 +217,62 @@
   border: 1px solid #ccc;
   border-radius: 5px;
   resize: none;
+}
+
+/* スマートフォン用のスタイル */
+@media (max-width: 600px) {
+  .admin-groups-container, .admin-spots-container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .left-aligned-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .left-aligned-content h1 {
+    margin-bottom: 10px;
+  }
+
+  .table-container {
+    padding: 10px;
+  }
+
+  .admin-groups-table, .admin-spots-table {
+    font-size: 12px;
+  }
+
+  .admin-groups-table th, .admin-groups-table td,
+  .admin-spots-table th, .admin-spots-table td {
+    padding: 8px;
+  }
+
+  /* 表示する列を制御 */
+  .admin-groups-table .col-group-name,
+  .admin-groups-table .col-group-actions,
+  .admin-spots-table .col-spot-name,
+  .admin-spots-table .col-spot-actions {
+    display: table-cell;
+  }
+
+  .admin-groups-table .col-group-creator,
+  .admin-groups-table .col-group-text,
+  .admin-spots-table .col-spot-text,
+  .admin-spots-table .col-spot-address,
+  .admin-spots-table .col-spot-latitude,
+  .admin-spots-table .col-spot-longitude {
+    display: none;
+  }
+
+  .admin-groups-form, .admin-spots-form {
+    width: 90%;
+  }
+
+  .btn-primary, .btn-show, .btn-edit, .btn-delete {
+    width: 100%;
+    margin: 10px 0;
+    padding: 5px 0;
+    font-size: 14px;
+  }
 }

@@ -22,9 +22,11 @@
             <td class="col-group-creator"><%= group.creator %></td>
             <td class="col-group-text"><%= group.text %></td>
             <td class="col-group-actions">
-              <%= link_to 'Spot', admin_group_path(group), class: 'btn btn-show' %>
-              <%= link_to 'Edit', edit_admin_group_path(group), class: 'btn btn-edit' %>
-              <%= link_to 'Delete', admin_group_path(group), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' }, class: 'btn btn-delete' %>
+              <div class="action-buttons">
+                <%= link_to 'Spot', admin_group_path(group), class: 'btn btn-show' %>
+                <%= link_to 'Edit', edit_admin_group_path(group), class: 'btn btn-edit' %>
+                <%= link_to 'Delete', admin_group_path(group), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' }, class: 'btn btn-delete' %>
+              </div>
             </td>
           </tr>
         <% end %>

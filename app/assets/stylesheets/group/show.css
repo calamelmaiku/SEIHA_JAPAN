@@ -55,3 +55,48 @@
 .group-spot-name:hover {
   color: orangered;
 }
+
+/* スマートフォン用のスタイル */
+@media (max-width: 600px) {
+  .group-detail {
+    margin: 10px;
+  }
+
+  .group-group-name {
+    font-size: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .completion-rate {
+    font-size: 16px;
+    margin-left: 0;
+    margin-top: 5px;
+  }
+
+  .group-creator {
+    font-size: 16px;
+    padding: 5px;
+  }
+
+  .group-text {
+    font-size: 16px;
+    padding: 5px;
+  }
+
+  .group-spots {
+    margin-top: 15px;
+  }
+
+  .spot-list {
+    display: block;
+  }
+
+  .group-spot-names {
+    font-size: 20px;
+  }
+
+  .group-spot-name {
+    font-size: 20px;
+  }
+}
