@@ -139,6 +139,47 @@
   color: #333;
 }
 
+.user-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.user-header h1 {
+  font-size: 24px;
+  margin-right: 20px;
+  color: #333;
+}
+
+.follow-info {
+  display: flex;
+  gap: 10px;
+}
+
+.follow-info p {
+  margin: 0;
+  font-size: 16px;
+  color: #666;
+}
+
+.btn-follow {
+  display: inline-block;
+  height: 30px;
+  padding: 0 10px;
+  line-height: 30px;
+  text-align: center;
+  border: none;
+  border-radius: 2px;
+  background-color: green;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-follow:hover {
+  background-color: darkgreen;
+}
+
 /* ユーザー編集ボタン */
 .user-edit {
   color: darkslategray;
