@@ -1,6 +1,20 @@
 <%= render 'shared/header' %>
 <div class="user-details-container">
-  <%= link_to @user.name, edit_user_path(@user), class: "user-edit" %>
+  <div class="user-header">
+    <%= link_to @user.name, edit_user_path(@user), class: "user-edit" %>
+    <div class="follow-info">
+      <p>フォロー人数: <%= @following_count %></p>
+      <p>フォロワー人数: <%= @followers_count %></p>
+    </div>
+  </div>
+
+  <% unless current_user == @user %>
+    <% if current_user.following?(@user) %>
+      <%= button_to 'フォロー解除', relationship_path(current_user.active_relationships.find_by(followed_id: @user.id)), method: :delete, class: 'btn-follow' %>
+    <% else %>
+      <%= button_to 'フォロー', relationships_path(followed_id: @user.id), method: :post, class: 'btn-follow' %>
+    <% end %>
+  <% end %>
 
   <h2>達成率</h2>
 

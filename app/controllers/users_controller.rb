@@ -1,11 +1,17 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
   before_action :set_user, only: [:show, :edit, :update]
-  before_action :correct_user, only: [:show, :edit, :update]
+  before_action :correct_user, only: [:edit, :update]
 
   def show
-    @groups = Group.all
-    @group_completion_rates = calculate_group_completion_rates(@user)
+    if current_user.following?(@user) || current_user == @user
+      @groups = Group.all
+      @group_completion_rates = calculate_group_completion_rates(@user)
+      @following_count = @user.following.count
+      @followers_count = @user.followers.count
+    else
+      redirect_to root_path, alert: "このユーザーをフォローすると詳細ページが見られます"
+    end
   end
 
   def edit
